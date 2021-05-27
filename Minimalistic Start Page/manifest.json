@@ -10,8 +10,6 @@
     },
     "permissions": [
         "storage",
-        "fileSystem",
-        "topSites",
         "bookmarks"
     ],
     "chrome_url_overrides" : {
