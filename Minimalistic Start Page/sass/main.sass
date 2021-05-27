@@ -1,0 +1,146 @@
+@import "const"
+*
+    box-sizing: border-box
+    
+body
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), #eee no-repeat center center fixed
+    background-size: cover
+
+// @at-root
+//     --content-color: $barColor
+
+.container
+    margin-top: 12.1em
+    display: flex
+    flex-direction: column
+    align-items: center
+
+.tile-grid
+    display: flex
+    justify-content: center
+    width: $gridsize
+    flex-wrap: wrap
+
+
+.tile
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: contain
+    width: $tilesize
+    height: $tilesize
+    text-decoration: none
+    background-color: #eee
+    display: flex
+    align-items: center
+    justify-content: center
+    &-overlay
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 100%
+        height: 100%
+        background: none
+    &:hover > .tile-overlay
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))
+        
+.no-bg
+    background-color: none!important
+        
+
+.logo-wrapper
+    margin-bottom: 2.3em
+    img
+        width: auto
+        height: 100%
+        filter: brightness(0) invert(0.98)
+
+
+.bookmarks-bar
+    --content-color: #6d1212
+    width: 100%
+    height: $barSize
+    background-color: $barColor
+    position: absolute
+    top: 0
+    left: 0
+    display: flex
+    color: #eee
+    flex-wrap: wrap
+    a
+        color: inherit
+        text-decoration: none
+    
+    .elem
+        height: $barSize
+        padding: 0 6px
+        display: flex
+        // justify-content: center
+        align-items: center
+        cursor: pointer
+        
+        &:hover
+            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))
+        
+        .icon
+            display: block
+            width: $iconSize
+            height:  $iconSize
+            background-repeat: no-repeat!important
+            background-position: center center!important
+        
+        .text
+            margin-left: 0.5em
+            text-overflow: ellipsis
+            max-width: 10em
+            white-space: nowrap;
+            overflow: hidden; 
+
+    .folder
+        position: relative
+        .title
+            display: flex
+            // justify-content: center
+            align-items: center
+
+        .content
+            position: absolute
+            background-color: var(--content-color)
+            display: none
+            z-index: 2
+
+        .icon
+            background: url("../img/folder.svg")
+            filter: brightness(0) invert(0.9)
+            background-size: $iconFolderSize $iconFolderSize!important
+
+        &.nested
+            .content
+                top: 0
+                left: 100%
+        
+        
+        &:hover > .content
+            display: block
+
+        
+        &.hidden
+            margin-left: auto
+            > .content
+                right: 0
+            
+                    
+            > .elem > .icon
+                background: url("../img/down-arrow.svg")
+                width: 1.5em
+            .folder
+                .content
+                    left: -100%;
+                    top: 0
+
+    .bookmark
+        display: flex
+        // justify-content: center
+        align-items: center
+        .icon
+            // background: url("https://www.google.com/favicon.ico")
+            filter: none

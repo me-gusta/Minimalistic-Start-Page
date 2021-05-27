@@ -1,0 +1,21 @@
+{
+    "name": "Minimalistic Start Page",
+    "version": "1",
+    "manifest_version": 2,
+    "description": "Minimalistic Start Page",
+    "icons": {
+        "128": "img/icon/icon128.png",
+        "48": "img/icon/icon48.png",
+        "16": "img/icon/icon16.png"
+    },
+    "permissions": [
+        "storage",
+        "fileSystem",
+        "topSites",
+        "bookmarks"
+    ],
+    "chrome_url_overrides" : {
+        "newtab": "index.html"
+    },
+    "options_page": "options.html"
+}

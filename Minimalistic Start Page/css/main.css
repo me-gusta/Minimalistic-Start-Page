@@ -1,0 +1,212 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), #eee no-repeat center center fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), #eee no-repeat center center fixed;
+  background-size: cover;
+}
+
+.container {
+  margin-top: 12.1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tile-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 28em;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.tile {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  width: 7em;
+  height: 7em;
+  text-decoration: none;
+  background-color: #eee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.tile-overlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: none;
+}
+
+.tile:hover > .tile-overlay {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2)));
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+}
+
+.no-bg {
+  background-color: none !important;
+}
+
+.logo-wrapper {
+  margin-bottom: 2.3em;
+}
+
+.logo-wrapper img {
+  width: auto;
+  height: 100%;
+  -webkit-filter: brightness(0) invert(0.98);
+          filter: brightness(0) invert(0.98);
+}
+
+.bookmarks-bar {
+  --content-color: #6d1212;
+  width: 100%;
+  height: 2.5em;
+  background-color: #6d1212;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #eee;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.bookmarks-bar a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.bookmarks-bar .elem {
+  height: 2.5em;
+  padding: 0 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.bookmarks-bar .elem:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2)));
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+}
+
+.bookmarks-bar .elem .icon {
+  display: block;
+  width: 1.4em;
+  height: 1.4em;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+}
+
+.bookmarks-bar .elem .text {
+  margin-left: 0.5em;
+  text-overflow: ellipsis;
+  max-width: 10em;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.bookmarks-bar .folder {
+  position: relative;
+}
+
+.bookmarks-bar .folder .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bookmarks-bar .folder .content {
+  position: absolute;
+  background-color: var(--content-color);
+  display: none;
+  z-index: 2;
+}
+
+.bookmarks-bar .folder .icon {
+  background: url("../img/folder.svg");
+  -webkit-filter: brightness(0) invert(0.9);
+          filter: brightness(0) invert(0.9);
+  background-size: 1em 1em !important;
+}
+
+.bookmarks-bar .folder.nested .content {
+  top: 0;
+  left: 100%;
+}
+
+.bookmarks-bar .folder:hover > .content {
+  display: block;
+}
+
+.bookmarks-bar .folder.hidden {
+  margin-left: auto;
+}
+
+.bookmarks-bar .folder.hidden > .content {
+  right: 0;
+}
+
+.bookmarks-bar .folder.hidden > .elem > .icon {
+  background: url("../img/down-arrow.svg");
+  width: 1.5em;
+}
+
+.bookmarks-bar .folder.hidden .folder .content {
+  left: -100%;
+  top: 0;
+}
+
+.bookmarks-bar .bookmark {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bookmarks-bar .bookmark .icon {
+  -webkit-filter: none;
+          filter: none;
+}

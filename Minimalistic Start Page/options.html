@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>New Tab Options</title>
+    <style>
+        body {
+            padding: 2em;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Customize Quick Access Links</h3>
+
+    <table class="tabs-table" border="1">
+        <thead style="text-align: center;">
+            <tr>
+                <th>Title</th>
+                <th>URL</th>
+                <th>Image URL</th>
+                <th>Background color</th>
+                <th>Custom CSS</th>
+            </tr>
+        </thead>
+        <tbody id="tile-table">
+        </tbody>
+    </table>
+    <br>
+    <button id="add">Add</button>
+    <button id="remove">Remove</button>
+    <button id="saveSites">Save</button>
+
+    <hr>
+
+    <h3>Customize New Tab</h3>
+    <input type="text" id="main-bg-input" placeholder="Background Image URL">
+    <br>
+    <label for="displayGoogleLogo">Show Google logo</label>
+    <input type="checkbox" id="displayGoogleLogo">
+    <br>
+    <br>
+    <button id="save-main-bg">Save</button>
+    <br>
+    <p>NOTE: If browser doesn't automaticaly cache image, try using another image website.</p>
+
+    <hr>
+
+    <h3>Customize Bookmarks Bar</h3>
+    <label for="displayBookmarksBar">Show bookmarks bar</label>
+    <input type="checkbox" id="displayBookmarksBar">
+    <br>
+    <label for="displayBookmarksBar">Bookmarks Bar color</label>
+    <input type="text" id="barColor" placeholder="#ffffff">
+    <br>
+    <br>
+    <button id="saveBookmarksBar">Save</button>
+
+    <script src="js/options.js"></script>
+</body>
+
+</html>
